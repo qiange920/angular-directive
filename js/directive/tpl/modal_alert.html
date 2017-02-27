@@ -1,0 +1,10 @@
+<div class="weui_dialog_alert">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd"><strong class="weui_dialog_title" ng-bind-html="options.content|to_trusted">弹窗标题</strong></div>
+        <div class="weui_dialog_bd" ng-bind-html="options.desc|to_trusted"></div>
+        <div class="weui_dialog_ft">
+            <a href="javascript:;" class="weui_btn_dialog primary" ng-click="executeBefroeClose(options.btn.action)">确定</a>
+        </div>
+    </div>
+</div>

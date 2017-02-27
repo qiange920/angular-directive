@@ -1,0 +1,28 @@
+<div class="page clearfix">
+    <div id="J_bottomPage" class="p-wrap">
+			<span class="p-num">
+				<a class="pn-prev" ng-class="{'disabled':currentPage == 1}"
+                   ng-click="selectCurrentPage(currentPage-1)"><i>
+                    &lt;</i><em>上一页</em></a>
+
+				<a href="" ng-show="vm.showLeftDot" ng-class="{'curr':currentPage==1}"
+                   ng-click="selectCurrentPage(1)"><span>1</span></a>
+				<b class="pn-break" ng-show="vm.showLeftDot">...</b>
+
+                <a href="" ng-class="{'curr': currentPage==page }" ng-repeat="page in vm.pagerList"
+                   ng-click="selectCurrentPage(page)"><span ng-bind="page"></span></a>
+
+                <b class="pn-break" ng-show="vm.showRightDot">...</b>
+                <a href="" ng-show="vm.showRightDot" ng-class="{'curr':currentPage==totalPage}"
+                   ng-click="selectCurrentPage(totalPage)"><span ng-bind="totalPage"></span></a>
+
+				<a class="pn-next" ng-class="{'disabled':currentPage == totalPage}" href=""
+                   ng-click="selectCurrentPage(currentPage+1)"><em>下一页</em><i>&gt;</i></a>
+			</span>        
+			<span class="p-skip">
+				<em>共<b ng-bind="totalPage"></b>页&nbsp;&nbsp;到第</em>
+				<input class="input-txt" type="text" ng-model="vm.goPageNum"><em>页</em>
+				<a class="btn btn-default" href="" ng-click="selectCurrentPage(vm.goPageNum)">确定</a>
+			</span>
+    </div>
+</div>

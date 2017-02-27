@@ -1,0 +1,8 @@
+<div class="swiper-wrapper">
+    <div class="swiper-slide" ng-class="{'swiper-left':direction, 'swiper-right':!direction}" ng-animate-swap="activeIndex" >
+        <a href="{{banner[activeIndex].url}}"   ng-click ="show(banner[activeIndex])" title="{{banner[activeIndex].title}}">
+        	<slide-img item="banner[activeIndex]"></slide-img>
+        </a>
+    </div>
+</div>
+
